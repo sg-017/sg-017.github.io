@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
+
+:root {
+  --deep-blue: #0e3568;
+  --sea-blue: #dff1ff;
+  --card-bg: rgba(255, 255, 255, 0.36);
+  --card-border: rgba(255, 255, 255, 0.35);
+  --shadow: 0 12px 30px rgba(14, 53, 104, 0.18);
+  --pixel-font: "Press Start 2P", "VT323", "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+  color: var(--deep-blue);
+}
+
+body {
+  background-color: var(--sea-blue);
+  background-image:
+    linear-gradient(rgba(223, 241, 255, 0.3), rgba(223, 241, 255, 0.3)),
+    url("../assets/images/sea-background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.site-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.top-nav {
+  width: min(1024px, 100%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 18px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 6px 18px rgba(14, 53, 104, 0.18);
+}
+
+.nav-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.brand {
+  font-family: var(--pixel-font);
+  font-size: clamp(12px, 1.6vw, 16px);
+  color: var(--deep-blue);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.top-nav nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.top-nav nav a {
+  font-family: var(--pixel-font);
+  font-size: clamp(10px, 1.4vw, 13px);
+  color: var(--deep-blue);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+}
+
+.top-nav nav a:hover,
+.top-nav nav a.active {
+  border-bottom-color: var(--deep-blue);
+}
+
+.home-main,
+.content-main {
+  width: min(1024px, 100%);
+  margin: 26px auto 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.hero-card,
+.glass-card {
+  width: 100%;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}
+
+.hero-card {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  min-height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 24px;
+}
+
+.pixel-title {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--pixel-font);
+  letter-spacing: 2px;
+  font-size: clamp(28px, 5vw, 68px);
+  line-height: 1.35;
+}
+
+.typing-cursor {
+  animation: blink 0.9s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.avatar-wrap {
+  margin-top: 28px;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.avatar-wrap.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#pixel-avatar {
+  width: min(200px, 34vw);
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 8px 14px rgba(14, 53, 104, 0.22));
+}
+
+.glass-card {
+  padding: 30px clamp(18px, 4vw, 40px);
+}
+
+h1,
+h2 {
+  color: var(--deep-blue);
+}
+
+p,
+li {
+  line-height: 1.65;
+}
+
+a {
+  color: var(--deep-blue);
+}
+
+.contact-list {
+  display: flex;
+  gap: 18px;
+  padding: 0;
+  margin-top: 12px;
+}
+
+.contact-list li {
+  list-style: none;
+}
+
+.contact-list a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 6px 16px rgba(14, 53, 104, 0.15);
+  text-decoration: none;
+  color: var(--deep-blue);
+}
+
+.contact-list svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--deep-blue);
+}
+
+.research-list {
+  margin: 12px 0 0;
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+.research-list li {
+  margin-bottom: 6px;
+  list-style: disc;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.tool-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tool-row span {
+  font-weight: 600;
+}
+
+.tool-icons {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tool-label {
+  font-weight: 600;
+}
+
+.skill-chip {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 18px rgba(14, 53, 104, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--deep-blue);
+  position: relative;
+  cursor: default;
+}
+
+.skill-icons.devicon .skill-chip i {
+  font-size: 1.4rem;
+}
+
+.skill-chip img {
+  width: 26px;
+  height: 26px;
+}
+
+.skill-chip svg {
+  width: 26px;
+  height: 26px;
+}
+
+.skill-chip svg path {
+  fill: currentColor;
+}
+
+.skill-chip::after {
+  content: attr(data-name);
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 10px;
+  border-radius: 10px;
+  background: rgba(14, 53, 104, 0.9);
+  color: #fff;
+  font-size: 0.65rem;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.skill-chip:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -6px);
+}
+
+.skills-subtext {
+  margin-top: 10px;
+}
+
+.blog-entry .meta {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(14, 53, 104, 0.12);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.coming-soon {
+  margin: 6px 0 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 700px) {
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

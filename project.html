@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Shutian</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+<body>
+  <div class="site-shell">
+    <header class="top-nav">
+      <div class="brand-group">
+        <div class="nav-avatar">
+          <img src="assets/images/profile-photo.png" alt="Profile photo">
+        </div>
+        <a class="brand" href="index.html">Shutian</a>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a class="active" href="project.html">Project</a>
+      </nav>
+    </header>
+
+    <main class="content-main">
+      <section class="glass-card">
+        <h1>Projects</h1>
+        <div class="project-grid">
+          <article class="project-card">
+            <h2>Daily Multi-Tenant Paper Discovery & Digest Platform</h2>
+            <p>
+              Developed a scalable multi-tenant SaaS platform that helps individuals and research teams efficiently discover, rank, and digest scientific literature. Built on a Next.js and Supabase architecture, the system supports personalized workspaces with role-based access and delivers daily paper recommendations tailored to user-defined research preferences.
+            </p>
+            <p>
+              The platform implements an end-to-end paper pipeline that continuously ingests publications from arXiv and OpenAlex, removes duplicates, generates embeddings in batches, and ranks results using cosine similarity against weighted signals such as keywords, authors, and titles. An embedding-driven relevance mode enables more semantically meaningful search compared to traditional keyword filtering.
+            </p>
+            <p>
+              The application features a responsive dashboard with advanced search, filtering, pagination, vocabulary expansion, and persistent interface settings, alongside bilingual support (EN/ZH) and dark/light themes. Sensitive credentials are secured using AES-256-GCM encryption, and database workflows are automated through Supabase migrations with end-to-end testing to ensure reliability.
+            </p>
+            <div class="tool-row">
+              <span class="tool-label">Tools Used:</span>
+              <div class="tool-icons devicon">
+                <div class="skill-chip" data-name="JavaScript">
+                  <i class="devicon-javascript-plain"></i>
+                </div>
+                <div class="skill-chip" data-name="TypeScript">
+                  <i class="devicon-typescript-plain"></i>
+                </div>
+                <div class="skill-chip" data-name="HTML">
+                  <i class="devicon-html5-plain"></i>
+                </div>
+                <div class="skill-chip" data-name="CSS">
+                  <i class="devicon-css3-plain"></i>
+                </div>
+                <div class="skill-chip" data-name="React">
+                  <i class="devicon-react-original"></i>
+                </div>
+                <div class="skill-chip" data-name="Next.js">
+                  <i class="devicon-nextjs-plain"></i>
+                </div>
+                <div class="skill-chip" data-name="SQL">
+                  <i class="devicon-mysql-plain"></i>
+                </div>
+                <div class="skill-chip" data-name="Docker">
+                  <i class="devicon-docker-plain"></i>
+                </div>
+                <div class="skill-chip" data-name="PNPM">
+                  <i class="devicon-pnpm-plain"></i>
+                </div>
+              </div>
+            </div>
+            <p><b>Link for a mini demo version:</b> coming soon...</p>
+          </article>
+          <article class="project-card">
+            <h2>RSheet - A Multi-User Concurrent Spreadsheet System</h2>
+            <p>
+              RSheet is a concurrent spreadsheet server written in Rust that enables multiple clients to interact with a shared spreadsheet through live GET/SET operations and spreadsheet-style expressions. The system evaluates formulas by resolving cell dependencies including single-cell and range references, and automatically propagates updates to affected cells.
+            <p>
+              The architecture emphasizes correctness and thread safety. A background worker thread handles dependency updates to ensure consistent recalculation without blocking client requests. Recursive resolution and cycle detection were implemented to support complex formula chains while preventing invalid dependency graphs.            </p>
+            </p>
+            <div class="tool-row">
+              <span class="tool-label">Tools Used:</span>
+              <div class="tool-icons devicon">
+                <div class="skill-chip" data-name="Rust">
+                  <i class="devicon-rust-plain"></i>
+                </div>
+                <div class="skill-chip" data-name="Rhai">
+                  <span aria-hidden="true">Rhai</span>
+                </div>
+              </div>
+            </div>
+            <p><b>Link:</b> coming soon...</p>
+          </article>
+          <!-- <article class="project-card">
+            <h2>Project Three</h2>
+            <p>.</p>
+            <p class="coming-soon">coming soon</p>
+          </article> -->
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
