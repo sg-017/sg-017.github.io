@@ -74,14 +74,15 @@
                 </div>
               </div>
             </div>
-            <p><b>Link for a mini demo version:</b> coming soon...</p>
+            <p><b>Link for a mini version:</b> coming soon...</p>
           </article>
           <article class="project-card">
-            <h2>RSheet - A Multi-User Concurrent Spreadsheet System</h2>
+            <h2>RSLogo - Logo Interpreter</h2>
             <p>
-              RSheet is a concurrent spreadsheet server written in Rust that enables multiple clients to interact with a shared spreadsheet through live GET/SET operations and spreadsheet-style expressions. The system evaluates formulas by resolving cell dependencies including single-cell and range references, and automatically propagates updates to affected cells.
+              RSLogo is a command-line graphics engine written in Rust that interprets a Logo-style language and renders the output as PNG or SVG images. The project implements the full execution pipeline: lexical/parsing logic, an AST-based expression system, runtime evaluation, control-flow execution, and drawing through a turtle graphics model.
+            </p>
             <p>
-              The architecture emphasizes correctness and thread safety. A background worker thread handles dependency updates to ensure consistent recalculation without blocking client requests. Recursive resolution and cycle detection were implemented to support complex formula chains while preventing invalid dependency graphs.            </p>
+              It supports movement and pen commands, variables, arithmetic and boolean expressions, conditional and loop constructs, and user-defined procedures with arguments. The parser is built with parser combinators, and the runtime enforces typed expression evaluation across integers, booleans, and strings. The repository is organized into clear parser and executor layers, with integration tests covering parsing, runtime behavior, control flow, procedures, and error scenarios.
             </p>
             <div class="tool-row">
               <span class="tool-label">Tools Used:</span>
@@ -89,12 +90,16 @@
                 <div class="skill-chip" data-name="Rust">
                   <i class="devicon-rust-plain"></i>
                 </div>
-                <div class="skill-chip" data-name="Rhai">
-                  <span aria-hidden="true">Rhai</span>
+                <div class="skill-chip" data-name="Logo (programming language)">
+                  <span aria-hidden="true">Logo</span>
                 </div>
               </div>
             </div>
-            <p><b>Link:</b> coming soon...</p>
+            <p><b>
+              <a href="https://sg-017.github.io/RSLogo">
+                View on GitHub
+              </a>
+            </b></p>
           </article>
           <!-- <article class="project-card">
             <h2>Project Three</h2>
